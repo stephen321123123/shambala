@@ -1,0 +1,116 @@
+/* Base styles */
+body {
+    background-color: #fdf7e3; /* Soft warm background */
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+
+.heading {
+    text-align: center;
+    padding: 2rem 1rem;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #8b4f3a;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Funnel Sans', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #4a3c31;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Shared container styles */
+.container01,
+.container02,
+.container03 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 64rem;
+    width: 100%;
+    margin: 1.5rem auto;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: #fff7f1; /* Calming section color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Reuse image/text layout */
+.left-text, .right-text,
+.left-image, .right-image {
+    flex: 1;
+}
+
+.left-text, .right-text {
+    padding: 0 2rem;
+}
+
+.right-image img,
+.left-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container01,
+    .container02,
+    .container03 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-text, .right-text {
+        padding: 1rem 0;
+    }
+
+    .left-image, .right-image {
+        margin-top: 1rem;
+    }
+}
+
+.container01,
+.container02,
+.container03 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 64rem;
+    width: 100%;
+    margin: 1.5rem auto;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: #fff7f1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 👇 Hover effect: scales up and adds stronger shadow */
+.container01:hover,
+.container02:hover,
+.container03:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+
+
