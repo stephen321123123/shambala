@@ -1,139 +1,168 @@
 /* Base styles */
 body {
-    background-color: #d1b96a; /* Soft warm background */
+    background-color: #6a2e6b; /* Light neutral */
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     color: #333;
-}
-
-.heading {
+    line-height: 1.7;
+  }
+  
+  .heading {
     text-align: center;
-    background-color: purple;
-    padding: 2rem 1rem;
+    background-color: #6a2e6b; /* Deep plum */
+    padding: 3rem 1rem;
     max-width: 64rem;
     margin: 0 auto;
-}
-
-h1 {
+  }
+  
+  h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 3rem;
-    color: #c7da20;
+    font-size: 4rem;
+    color: #d4c76f; /* Warm gold */
     margin: 0;
-}
-
-h2 {
-    font-family: 'Funnel Sans', sans-serif;
-    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-family: 'Hepta Slab', serif;
+    font-size: 2rem;
     margin-bottom: 1rem;
-    color: #4a3c31;
-}
-
-p {
+    color: #6a2e6b; /* Brand purple for headings */
+  }
+  
+  p {
     font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.navbar-links {
+    color: #555;
+  }
+  
+  .navbar-links {
     display: flex;
-    gap: 2rem; /* space between links */
-    margin-top: 1rem;
+    gap: 2rem;
+    margin-top: 1.5rem;
     justify-content: center;
-}
-
-.navbar-links a {
+  }
+  
+  .navbar-links a {
     text-decoration: none;
-    color: #c7da20;
+    color: #d4c76f; /* Warm gold */
     font-weight: bold;
-    font-family: 'Great Vibes', cursive;
-    transition: color 0.2s ease;
-}
-
-.navbar-links a:hover {
-    color: #a64ac9; /* purple hover effect */
-}
-
-
-/* Shared container styles */
-.container01,
-.container02,
-.container03 {
+    font-family:'Courier New', Courier, monospace;
+    position: relative;
+  }
+  
+  .navbar-links a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: #fff;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+  }
+  
+  .navbar-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Containers */
+  .container01,
+  .container02,
+  .container03 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 64rem;
     width: 100%;
-    margin: 1.5rem auto;
+    margin: 2rem auto;
     padding: 2rem;
     box-sizing: border-box;
-    border-radius: 12px;
-    background-color: #fff7f1; /* Calming section color */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-
-    
-}
-
-/* Reuse image/text layout */
-.left-text, .right-text,
-.left-image, .right-image {
+    border-radius: 16px;
+    background-color: #d4c76f; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .left-text, .right-text,
+  .left-image, .right-image {
     flex: 1;
-}
-
-.left-text, .right-text {
+  }
+  
+  .left-text, .right-text {
     padding: 0 2rem;
-}
-
-.right-image img,
-.left-image img {
+  }
+  
+  .right-image img,
+  .left-image img {
     width: 100%;
     height: auto;
-    display: block;
-    border-radius: 10px;
+    border-radius: 12px;
     object-fit: cover;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
+  }
+  
+  .container01:hover,
+  .container02:hover,
+  .container03:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  /* Read More Button */
+  .read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #6a2e6b; /* Brand purple */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .read-more:hover {
+    background-color: #501f52; /* Darker plum on hover */
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
     .container01,
     .container02,
     .container03 {
-        flex-direction: column;
-        text-align: center;
+      flex-direction: column;
+      text-align: center;
     }
-
+  
     .left-text, .right-text {
-        padding: 1rem 0;
+      padding: 1rem 0;
     }
-
+  
     .left-image, .right-image {
-        margin-top: 1rem;
+      margin-top: 1rem;
     }
-}
+  }
 
-.container01,
-.container02,
-.container03 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 64rem;
-    width: 100%;
-    margin: 1.5rem auto;
-    padding: 2rem;
-    box-sizing: border-box;
-    border-radius: 12px;
-    background-color: #fff7f1;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  .back-button {
+    display: inline-block;
+    margin-bottom: 1rem; /* Better than big margin all around */
+    padding: 0.5rem 1.2rem;
+    background-color: #6a2e6b; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #501f52;
+  }
 
-/* 👇 Hover effect: scales up and adds stronger shadow */
-.container01:hover,
-.container02:hover,
-.container03:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
-    z-index: 1;
-}
-
-
-
+  html {
+    overflow-y: scroll;
+  }
+  
+  
+  
+  
