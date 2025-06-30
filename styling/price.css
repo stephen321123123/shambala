@@ -64,6 +64,33 @@ body {
  .navbar-links a:hover::after {
    width: 100%;
  }
+
+.price-button {
+  max-width: 64rem;
+  margin: 0 auto;
+  margin-bottom: 10px;  /* gap between button and container01 */
+}
+.back-button {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: #d4c76f; 
+  color: #501f52;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  
+  border: 2px solid transparent; /* Reserve border space */
+  box-sizing: border-box;        /* Make sure border included in size */
+}
+
+.back-button:hover {
+  background-color: #501f52;
+  color: #fff;
+  border-color: #d4c76f;         /* Just change border color on hover */
+}
+
+
+
  
  /* Containers */
  .container01,
@@ -121,9 +148,7 @@ body {
    transition: background 0.3s ease;
  }
  
- .read-more:hover {
-   background-color: #501f52; /* Darker plum on hover */
- }
+
  
  /* Responsive */
  @media (max-width: 768px) {
@@ -143,21 +168,19 @@ body {
    }
  }
 
- .back-button {
+ .go-back {
    display: inline-block;
    margin-bottom: 1rem; /* Better than big margin all around */
    padding: 0.5rem 1.2rem;
-   background-color: #6a2e6b; 
-   color: #fff;
+   background-color: #d4c76f; 
+   color: #501f52;
    text-decoration: none;
    border-radius: 4px;
    font-weight: 600;
    transition: background 0.3s ease;
  }
  
- .back-button:hover {
-   background-color: #501f52;
- }
+
 
  html {
    overflow-y: scroll;

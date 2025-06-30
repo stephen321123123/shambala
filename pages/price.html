@@ -19,9 +19,13 @@
      
        
     </div>
-    
+    <div class="price-button">
+        <a href="homepage.html" class="back-button">← Go Back</a>
+    </div>
+  
 
     <div class="container01">
+      
         <div class="left-text">
             <h2>Signature Treatments</h2>
             <ul class="treatments">
@@ -43,7 +47,7 @@
                 <span class="price">€65 for 1 Hour 15 Minutes</span>
               </li>
             </ul>
-            <a href="details1.html" class="read-more">Read more</a>
+           
           </div>
           
           
@@ -53,44 +57,102 @@
       </div>
 
 
-      <div class="container02">
-        <div class="left-image">
+    <div class="container02">
+        <div class="left-text">
+            <h2>Massages</h2>
+            <ul class="treatments">
+              <li>
+                Aroma Massage - Light and Relaxing  
+                <span class="price">€50 for 1 Hour</span>
+              </li>
+              <li>
+                Stress relieving Back/Neck/Shoulder Massage  
+                <span class="price">€30 for 30 Minutes</span>
+              </li>
+              <li>
+                Full Body  Deep Tissue
+                <span class="price">€60 for 1 Hour</span>
+              </li>
+              <li>
+                Indian Head Massage  
+                <ul class="sub-treatments">
+                  <li>Includes Shoulder and Facial Massage</li>
+                </ul>
+                <span class="price">€40 for 45 Minutes</span>
+              </li>
+            </ul>
+         
+          </div>
+          
+          
+        <div class="right-image">
           <img src="/images/image01.jpeg" alt="Massage image">
         </div>
-        <div class="right-text">
-            <h2>Holistic Traditions ...</h2>
-            <p>Shambhala, in Tibetan Buddhist tradition, is a mythical kingdom often described as a spiritual paradise where all inhabitants have achieved enlightenment...</p>
-                <a href="details2.html" class="read-more">Read more</a>
-          </div>
       </div>
+
 
       <div class="container03">
         <div class="left-text">
-          <h2>My Experience ...</h2>
-          <p>Over the last couple of years I have trained in hot stone therapy , pregnancy massage, deep tissue, sports and Indian head massage...</p>
-          <a href="details3.html" class="read-more">Read more</a>
-        </div>
+            <h2>Hot Stone Treatments</h2>
+            <ul class="treatments">
+              <li>
+                Full Body Hot Stone Massage
+                <span class="price">€65 for 1 hour 15 Minutes</span>
+              </li>
+              <li>
+                Back of Body Hot Stone Massage  
+                <span class="price">€45 for 45 Minutes</span>
+              </li>
+              <li>
+                Back/Neck/Shoulder Hot Stone Massage
+                <span class="price">€35 for 30 Minutes</span>
+              </li>
+            </ul>
+            
+          </div>
+          
+          
         <div class="right-image">
           <img src="/images/image01.jpeg" alt="Massage image">
         </div>
       </div>
+
+      <div class="container01">
+        <div class="left-text">
+            <h2>Pregnancy Massages</h2>
+            <ul class="treatments">
+              <li>
+                Full Body 
+                <span class="price">€50 for 1 Hour</span>
+              </li>
+              <li>
+                Back/Neck/Shoulder
+                <span class="price">€30 for 30 Minutes</span>
+              </li>
+              <li>
+                Shambhala Escape - Pregnancy Package
+                <ul class="sub-treatments">
+                  <li>30 Minutes Back/Neck/Shoulder</li>
+                  <li>30 Minutes Facial</li>
+                  <li>15 Minutes Foot & Ankle Massage</li>
+                </ul>
+                <span class="price">€65 for 1 Hour 15 Minutes</span>
+              </li>
+            </ul>
+
+          </div>
+          
+          
+        <div class="right-image">
+          <img src="/images/image01.jpeg" alt="Massage image">
+        </div>
+      </div>
+
+
+
+      
    
-      <script>
-        const containers = document.querySelectorAll('.container01, .container02, .container03');
-    
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    containers.forEach(c => c.classList.remove('container-in-view'));
-                    entry.target.classList.add('container-in-view');
-                }
-            });
-        }, {
-            threshold: 0.5  // Container must be at least 50% visible
-        });
-    
-        containers.forEach(container => observer.observe(container));
-    </script>
+
     
     
 </body>
