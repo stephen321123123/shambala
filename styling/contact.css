@@ -1,3 +1,115 @@
-h1 {
-   font-style: italic;
+/* Remove centering and padding from body */
+body {
+  background-color: #6a2e6b; /* Deep plum */
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.7;
+  /* Remove flex and justify-content from body */
+  padding: 0; /* remove extra padding */
 }
+
+/* Header stays at the top */
+.heading {
+  text-align: center;
+  background-color: #6a2e6b; /* Deep plum */
+  padding: 3rem 1rem 2rem 1rem; /* padding top and bottom */
+  max-width: 64rem;
+  margin: 0 auto;
+  position: relative; /* keep normal flow */
+}
+
+/* Center heading title */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  color: #d4c76f; /* Warm gold */
+  margin: 0;
+}
+
+/* Nav links below heading */
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #d4c76f; /* Warm gold */
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+}
+
+.navbar-links a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #fff;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* Form container centered and spaced below header */
+form {
+  background-color: #d4c76f; /* Warm gold */
+  max-width: 640px;
+  width: 100%;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  
+  margin: 2rem auto 4rem auto; /* margin top and bottom for spacing */
+}
+
+form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Your other existing styles remain unchanged... */
+
+/* Back button container */
+.price-button {
+  max-width: 64rem;
+  margin: 0 auto 1.5rem auto;
+  text-align: left;
+}
+
+/* Back button styling */
+.back-button {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: #d4c76f;
+  color: #501f52;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #501f52;
+  color: #fff;
+  border: 2px solid #d4c76f;
+}
+
+html {
+  overflow-y: scroll;
+}
+
