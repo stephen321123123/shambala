@@ -193,7 +193,7 @@ body {
  
  .treatments > li {
    margin-bottom: 1rem;
-   font-weight: 600;
+   font-weight: 800;
  }
  
  .sub-treatments {
@@ -208,6 +208,36 @@ body {
    font-weight: bold;
    margin-top: 0.25rem;
  }
+
+ .welcome-box {
+  max-width: 64rem;        /* Same max width as containers */
+  width: 100%;             /* Full width within max */
+  margin: 2rem auto;
+  padding: 2rem 3rem;
+  background-color: #f0e289;  /* Soft, warm background */
+  color: #501f52;             /* Dark plum text */
+  border-left: 12px solid #a39010; /* Thicker gold accent border */
+  border-radius: 16px;          /* Match containers' border radius */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* Same shadow as containers */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  box-sizing: border-box;       /* Make sure padding and border included in width */
+}
+
+.welcome-box p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.welcome-box strong {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5rem;
+  color: #6a2e6b; /* Brand purple for NAMASTE */
+}
+
+
  
  
  
