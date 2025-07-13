@@ -232,7 +232,27 @@ body {
 }
 
 
- 
+ .navbar-links {
+  position: sticky;
+  top: 1rem;
+  z-index: 1000;
+  background-color: #6a2e6b;  /* Or whatever color you want */
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.75rem 2rem;      /* More padding for the bubble look */
+  border-radius: 2rem;         /* Makes it pill-shaped */
+  margin: 0 auto;           /* Centered with some margin */
+  width: fit-content;          /* So it wraps tight around the links */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Subtle shadow for lift */
+}
+
+
+.heading {
+  /* Remove position sticky/fixed if you added it earlier */
+  position: static;
+}
+
  
  
  
