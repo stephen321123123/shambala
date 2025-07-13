@@ -99,11 +99,7 @@ form {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-form:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
+
 
 label {
   display: flex;
@@ -161,5 +157,27 @@ html {
     align-self: center;
   }
 }
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* Or left/right as you want */
+  align-items: center;
+  margin-top: 1rem; /* Optional spacing */
+}
+
+.social-icons a {
+  color: #d4c76f;  /* Matches your gold accent */
+  font-size: 28px; /* Size of the icons */
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-right: 10px;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #fff; /* Or any hover color you want */
+}
+
+
 
 

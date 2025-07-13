@@ -127,13 +127,7 @@ body {
    object-fit: cover;
  }
  
- .container01:hover,
- .container02:hover,
- .container03:hover {
-   transform: translateY(-5px);
-   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-   z-index: 1;
- }
+
  
  /* Read More Button */
  .read-more {
