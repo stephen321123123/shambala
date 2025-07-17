@@ -31,9 +31,15 @@ h2 {
 
 .navbar-links {
   display: flex;
-  gap: 2rem;
-  margin-top: 1.5rem;
   justify-content: center;
+  gap: 2rem; /* Keep your spacing */
+  padding: 0.75rem 2rem; /* Keep pill shape */
+  margin: 0 auto;
+  width: fit-content;
+  /* Add this to fix alignment: */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navbar-links a {
@@ -198,6 +204,57 @@ html {
   /* Remove position sticky/fixed if you added it earlier */
   position: static;
 }
+
+.location {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin: 2rem auto;
+  max-width: 64rem;
+  text-align: center;
+}
+
+.location-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location-item h2 {
+  font-family: 'Hepta Slab', serif;
+  font-size: 1.5rem;
+  color: #d4c76f;
+  margin: 0 0 0.5rem 0;
+}
+
+.location-item p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin: 0;
+}
+
+/* If you want exact same width/positioning as the nav */
+.address-container {
+  display: flex;
+  justify-content: center;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 2rem; /* Match navbar-links padding */
+}
+
+.address {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: #d4c76f;
+  /* Match the navbar's visual width: */
+  max-width: 400px; /* Adjust this number as needed */
+  margin: 0.5rem auto 0;
+  /* Add slight left pull if still misaligned: */
+  position: relative;
+  left: -8px; /* Adjust this value pixel-by-pixel if needed */
+}
+
 
 
 
