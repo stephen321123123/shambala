@@ -144,23 +144,56 @@ body {
     background-color: #501f52; /* Darker plum on hover */
   }
   
-  /* Responsive */
-  @media (max-width: 768px) {
-    .container01,
-    .container02,
-    .container03 {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .left-text, .right-text {
-      padding: 1rem 0;
-    }
-  
-    .left-image, .right-image {
-      margin-top: 1rem;
-    }
+@media (max-width: 768px) {
+  .container01,
+  .container02,
+  .container03,
+  .container001 {
+    flex-direction: column;   /* Stack items vertically */
+    text-align: center;       /* Center content */
+    padding: 1.5rem;          /* Reduce padding for smaller screens */
   }
+
+  .left-text, .right-text, .left-image, .right-image {
+    padding: 0;               /* Remove horizontal padding */
+    margin: 0.5rem 0;         /* Add spacing between stacked elements */
+  }
+
+  .right-image img,
+  .left-image img {
+    width: 100%;              /* Image fills container */
+    height: auto;             /* Maintain aspect ratio */
+  }
+
+  h1 {
+    font-size: 2.5rem;  /* Smaller for mobile */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;    /* Slightly smaller paragraphs */
+  }
+
+  .welcome-box {
+    padding: 1rem;       /* Less padding on mobile */
+  }
+
+   .navbar-links {
+    flex-direction: column;  /* Stack links */
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .back-button {
+    width: auto;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
 
   .back-button {
     display: inline-block;
